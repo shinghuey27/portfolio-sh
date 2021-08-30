@@ -59,6 +59,14 @@
     }
   }
 }
+
+.no{
+  @extend.button;
+  &:hover {
+    border: 1px solid #2f80ed;
+    color: white !important;
+  }
+}
 .Active {
   @extend.button;
   border: 1px solid #2f80ed !important;

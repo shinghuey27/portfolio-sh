@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import styles from "../css/project.module.scss";
 import ReactPaginate from "react-paginate";
 const Buttons = [
@@ -8,7 +8,6 @@ const Buttons = [
   { name: "Responsive", value: "#responsive" },
   { name: "HTML", value: "#HTML" },
   { name: "Grid", value: "#grid" },
-
 ];
 
 export const Cards = [
@@ -18,20 +17,17 @@ export const Cards = [
     name: "Recipe Blog",
     desc: "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
     img: "../../img/recipe.png",
-    link:"https://food-blog-theta.vercel.app/",
-    linkCode:"https://github.com/shinghuey27/food-blog",
-
+    link: "https://food-blog-theta.vercel.app/",
+    linkCode: "https://github.com/shinghuey27/food-blog",
   },
   {
     id: 2,
-    tag: ["#React", "#grid" ,"#responsive"],
+    tag: ["#React", "#grid", "#responsive"],
     name: "My Gallery",
     desc: "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
     img: "../../img/gallery.png",
-    link:"https://gallery-sh.vercel.app/",
-    linkCode:"https://github.com/shinghuey27/gallery-sh",
-
-
+    link: "https://gallery-sh.vercel.app/",
+    linkCode: "https://github.com/shinghuey27/gallery-sh",
   },
   {
     id: 3,
@@ -39,10 +35,8 @@ export const Cards = [
     name: "Checkout",
     desc: "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
     img: "../../img/checkout.png",
-    link:"https://checkout-sh.vercel.app/",
-    linkCode:"https://github.com/shinghuey27/checkout-sh",
-
-
+    link: "https://checkout-sh.vercel.app/",
+    linkCode: "https://github.com/shinghuey27/checkout-sh",
   },
   {
     id: 4,
@@ -50,9 +44,8 @@ export const Cards = [
     name: "Edie Homepage",
     desc: "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
     img: "../../img/edie.png",
-    link:"https://edie-homepage-sh.vercel.app/",
-    linkCode:"https://github.com/shinghuey27/edie-homepage-sh",
-
+    link: "https://edie-homepage-sh.vercel.app/",
+    linkCode: "https://github.com/shinghuey27/edie-homepage-sh",
   },
   {
     id: 5,
@@ -60,9 +53,8 @@ export const Cards = [
     name: "My team page",
     desc: "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
     img: "../../img/team.png",
-    link:"https://team-page-eight.vercel.app/",
-    linkCode:"https://github.com/shinghuey27/team-page",
-
+    link: "https://team-page-eight.vercel.app/",
+    linkCode: "https://github.com/shinghuey27/team-page",
   },
   {
     id: 6,
@@ -70,9 +62,8 @@ export const Cards = [
     name: "Interior consultant",
     desc: "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
     img: "../../img/interior.png",
-    link:"https://interior-tau.vercel.app/",
-    linkCode:"https://github.com/shinghuey27/interior",
-
+    link: "https://interior-tau.vercel.app/",
+    linkCode: "https://github.com/shinghuey27/interior",
   },
   {
     id: 7,
@@ -80,9 +71,8 @@ export const Cards = [
     name: "404 Not Found",
     desc: "In this project, I work with HTML and CSS to create a responsive page. This page is similiar with a page. The design is from devchallenge.io",
     img: "../../img/404.png",
-    link:"https://error-page-one.vercel.app/",
-    linkCode:"https://github.com/shinghuey27/error-page",
-
+    link: "https://error-page-one.vercel.app/",
+    linkCode: "https://github.com/shinghuey27/error-page",
   },
 ];
 
@@ -96,22 +86,26 @@ const Project = () => {
   const pageCount = Math.ceil(card.length / perPage);
   const [tagClick, setTagClick] = useState("All");
 
-
-  const handlePageClick = ({ selected :selectedPage}) => {
+  const handlePageClick = ({ selected: selectedPage }) => {
     setCurrentPage(selectedPage);
   };
+
+  const selected = ({selected:selectedPage}) =>{
+      return selectedPage;
+  }
 
   function getCard() {
     return Cards;
   }
+
   function handleClick(e) {
     let tagCard = e.target.value;
-
     tagCard !== "All"
       ? setFilteredCard(FilterCard(tagCard))
       : setFilteredCard(getCard());
 
-      setTagClick(tagCard);  
+    setTagClick(tagCard);
+    setCurrentPage(0);
 
   }
 
@@ -130,9 +124,10 @@ const Project = () => {
                 <button
                   key={button.name}
                   value={button.value}
-                  className={button.value === tagClick ? styles.Active : styles.button}
+                  className={
+                    button.value === tagClick ? styles.Active : styles.button
+                  }
                   onClick={handleClick}
-
                 >
                   {button.name}
                 </button>
@@ -162,9 +157,22 @@ const Project = () => {
                 <div className={styles.cardDesc}>{cards.desc}</div>
 
                 <div className={styles.buttonOverview}>
-                  <a href={cards.link} target="_blank"  rel="noreferrer" className={styles.buttonDemo}>Demo
+                  <a
+                    href={cards.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.buttonDemo}
+                  >
+                    Demo
                   </a>
-                  <a href={cards.linkCode} target="_blank"  rel="noreferrer" className={styles.buttonCode}>Code</a>
+                  <a
+                    href={cards.linkCode}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.buttonCode}
+                  >
+                    Code
+                  </a>
                 </div>
               </div>
             </div>
@@ -180,7 +188,7 @@ const Project = () => {
           pageRangeDisplayed={2}
           onPageChange={handlePageClick}
           containerClassName={styles.pagination}
-          activeClassName={styles.active}
+          activeClassName={ currentPage === selected ? styles.no : styles.active}
         />
       </section>
     </section>

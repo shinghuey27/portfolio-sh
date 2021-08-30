@@ -1,0 +1,117 @@
+@import "color.scss";
+
+.blogContainer {
+  background-color: $color-white;
+  width: 596px;
+  height: 656px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+  margin-bottom: 2.625rem;
+}
+
+.expContainer {
+  background-color: $color-white;
+  width: 592px;
+  height: 482px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+  margin-bottom: 2.625rem;
+}
+
+.overview {
+  padding: 2rem 0 2rem 1.25rem;
+
+  h2 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #e0e0e0;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #828282;
+    white-space: pre-line;
+    width: 492px;
+    margin-bottom: 4.125rem;
+  }
+  div {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #2f80ed;
+  }
+}
+
+.cssImg {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3.125rem;
+  h1 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
+    width: 178px;
+    margin-top: 1.25rem;
+  }
+}
+.macImg {
+  width: 350px;
+  height: 321px;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+  margin-left: 3rem;
+}
+
+.expOverview {
+  padding: 1rem 2rem 0 2rem;
+  h1 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $black;
+    margin-bottom: 2.75rem;
+  }
+}
+.expCard {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2.25rem;
+}
+.cardImg {
+  width: 119.25px;
+  height: 84px;
+  object-fit: cover;
+}
+
+.expDetail {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  div {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #828282;
+    margin-bottom: 0.75rem;
+
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+    margin-bottom: 2rem;
+  }
+  p {
+    width: 387.57px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #828282;
+  }
+}

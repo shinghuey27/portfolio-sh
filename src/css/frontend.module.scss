@@ -1,0 +1,103 @@
+@import "color.scss";
+.container {
+  background-color: $color-white;
+  width: 415.02px;
+  height: 303px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+  margin-bottom: 2.625rem;
+}
+
+.overview {
+  padding: 1.5rem;
+}
+.title {
+  color: $black;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.skillBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.skillTitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $black;
+}
+.skillContainer {
+  border-radius: 12px;
+  background-color: #c4c4c4;
+  width: 236.85px;
+  height: 9.6px;
+}
+
+.fillContainer {
+  background-color: #2f80ed;
+  border-radius: 12px;
+  &Refresh {
+    background-color: #2f80ed;
+    border-radius: 12px;
+    height: 9.6px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    @keyframes animate {
+      100% {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+//Hobby start
+
+.hobbyContainer {
+  background-color: $color-white;
+  width: 415px;
+  height: 836px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+  margin-bottom: 2.625rem;
+}
+
+.titleHobby {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: $black;
+  margin-bottom: 1.6rem;
+}
+
+.hobbyImg {
+    width: 370px;
+    height: 139px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.hobby {
+  margin-bottom: 2.25rem;
+
+  h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    margin-bottom: 0.625rem;
+    margin-top: 1.625rem;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #828282;
+  }
+}

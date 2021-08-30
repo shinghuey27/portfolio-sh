@@ -1,0 +1,208 @@
+@import "color.scss";
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.container {
+  background-color: $color-white;
+  width: 1046px;
+  height: 115px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+  margin-bottom: 2.25rem;
+  @media (max-width:1024px){
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 2.25rem;
+
+  }
+}
+
+.overview {
+  padding: 1.3rem;
+  h1 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $black;
+    margin-bottom: 1rem;
+  }
+}
+
+.buttonAll {
+  display: flex;
+  flex-direction: row;
+  .button {
+    border: 1px solid $black;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $black;
+    width: 72px;
+    height: 33px;
+    text-align: center;
+    margin-left: 1rem;
+    cursor: pointer;
+    &:nth-of-type(4) {
+      width: 118px;
+    }
+
+    &:hover {
+      border: 1px solid #2f80ed;
+      color: #2f80ed;
+    }
+  }
+}
+.Active {
+  @extend.button;
+  border: 1px solid #2f80ed !important;
+  background-color: #2f80ed;
+  color: white !important;
+  &:hover {
+    border: 1px solid #2f80ed;
+    color: white !important;
+  }
+}
+//card container
+
+.cardContainer {
+  background-color: $color-white;
+  width: 328.49px;
+  height: 568px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+  margin-bottom: 2.25rem;
+  &:nth-of-type(2) {
+    margin-left: 1.9rem;
+    margin-right: 1.9rem;
+  }
+}
+.cardFlex {
+  display: flex;
+  flex-direction: row;
+}
+.cardDetails {
+  padding: 1.125rem 1.125rem 0 1.125rem;
+}
+.tagOverview {
+  display: flex;
+  flex-direction: row;
+}
+.tag {
+  white-space: pre-line;
+  padding-right: 1rem;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #4f4f4f;
+  padding-bottom: 1.3rem;
+}
+
+.cardName {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+  margin-bottom: 1.125rem;
+}
+
+.cardDesc {
+  width: 292px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #828282;
+}
+
+.cardImg {
+  width: 292px;
+  height: 217px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+}
+.buttonOverview {
+  margin-top: 2.5rem;
+}
+.buttonDemo {
+  background-color: #2f80ed;
+  border-radius: 12px;
+
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 12px 35px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buttonCode {
+  text-decoration: none;
+  border: 1px solid #2f80ed;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2f80ed;
+  border-radius: 12px;
+  text-align: center;
+  margin-left: 0.6rem;
+  cursor: pointer;
+  padding: 12px 35px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  li {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #4f4f4f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 10rem;
+    cursor: pointer;
+    margin-left: 0.75rem;
+    box-sizing: border-box;
+
+    &:hover {
+      border: 1px solid #2f80ed;
+      box-sizing: border-box;
+      border-radius: 4px;
+      a {
+        color: #2f80ed;
+      }
+    }
+    &.active {
+      background: #2f80ed;
+      border: 1px solid #2f80ed;
+      box-sizing: border-box;
+
+      border-radius: 4px;
+      a {
+        color: white;
+      }
+    }
+    a {
+      font-weight: 500;
+      color: #4f4f4f;
+      font-size: 18px;
+      line-height: 14px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @extend .noselect;
+    }
+  }
+}

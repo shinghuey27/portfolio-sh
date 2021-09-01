@@ -1,5 +1,5 @@
 import styles from "../css/summary.module.scss";
-import  "../App.css";
+import  "../App.scss";
 const Summary = () => {
   return (
     <section>

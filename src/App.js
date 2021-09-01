@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Blog from "./components/Blog";
 import Frontend from "./components/Frontend";
 import Project from "./components/Project";
